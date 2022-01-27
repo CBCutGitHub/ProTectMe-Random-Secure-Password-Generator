@@ -14,9 +14,12 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 // Character arrays
 var numericArray =  ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-var specialArray = [  '@',  '%',  '+',  '\\',  '/',  "'",  '!',  '#',  '$',  '^',  '?',  ':',  ',',  ')',  '(',  '}',  '{',  ']',  '[',  '~',  '-',  '_',  '.'];
-var lowerCaseArray = [  'a',  'b',  'c',  'd',  'e',  "f",  'g',  'h',  'i',  'j',  'k',  'l',  'm',  'n',  'o',  'p',  'q',  'r',  's',  't',  'u',  'v',  'w',  'x',  'y',  'z'];
-var upperCaseArray = [  'A',  'B',  'C',  'D',  'E',  "F",  'G',  'H',  'I',  'J',  'K',  'L',  'M',  'N', 'O',  'P',  'Q',  'R',  'S',  'R',  'U',  'V',  'W',  'X',  'Y',  'Z'];
+var specialArray = ['@',  '%',  '+',  '\\',  '/',  '&',  '!',  '#',  '$',  '^',  '?',  ':',  ',',  ')',  '(',  '}',  '{',  ']',  '[',  '~',  '-',  '_',  '.'];
+var lowerCaseArray = ['f', 'j', 'n', 'r', 'v', 'z', 'y', 'u', 'q', 'm', 'i', 'd', 'w', 'x', 's', 't', 'o', 'p', 'k', 'l', 'g', 'h', 'c', 'b', 'e', 'a'];
+var upperCaseArray = ['A', 'E', 'I', 'M', 'Q', 'U', 'Y', 'Z', 'V', 'R', 'N', 'J', 'F', 'B', 'C', 'H', 'G', 'L', 'K', 'P', 'O', 'T', 'S', 'X', 'W', 'D'];
+
+// var lowerCaseArray = ['f',  'j',  'n',  'r',  'v',  "z",  'y',  'u',  'q',  'm',  'i',  'd','w',  'x',  's',  'r',  'o',  'p',  'k',  'l',  'g',  'h',  'c',  'b',  'f',  'j'];
+// var upperCaseArray = [  'A',  'B',  'C',  'D',  'E',  "F",  'G',  'H',  'I',  'J',  'K',  'L',  'M',  'N', 'O',  'P',  'Q',  'R',  'S',  'R',  'U',  'V',  'W',  'X',  'Y',  'Z'];
 
 // function to radomize array
 function shuffleArray(array) {
@@ -34,12 +37,21 @@ shuffleArray(upperCaseArray)
 
 // function to get and store user and put into object called user input
 function getUserInput(){
-  var userPwdLength= prompt("How long you want pwd to be?")
-  var confirmNumeric= confirm("Do you want numericCharacters in pwd?")
-  var confirmSpecial = confirm("Do you want specialCharacters?")
-  var confirmLowercase = confirm("Do you want lowercaseCharacters?")
+  var userPwdLength= prompt("How long you want passwork to be?")
+  if(userPwdLength <8){alert("password must be greater than 7 characters")
+return;
+} 
+if(userPwdLength >128){alert("password must not be greater than 128 characters")
+return;
+} 
+  var confirmNumeric= confirm("Do you want numeric characters?")
+  var confirmSpecial = confirm("Do you want special Characters?")
+  var confirmLowercase = confirm("Do you want lowercase characters?")
   var confirmUppercase = confirm("Do you wnat uppercase characters?")
-
+if(confirmNumeric===false && confirmSpecial===false && confirmLowercase===false && confirmUppercase===false){
+  alert("You must choose atleast one character type.")
+  return null
+}
   var inputObject = {
     pwdLength: userPwdLength,
     NumericChoice: confirmNumeric,

@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #e9e4ba;
 }
 
 .wrapper {
@@ -31,12 +31,12 @@ header {
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(51, 62%, 80%);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
-  font-size: 18px;
+  font-size: 14px;
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
@@ -46,7 +46,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background:  #dfc03a;
   height: 2px;
 }
 
@@ -62,7 +62,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background:  #dfc03a;
   height: 2px;
 }
 
@@ -74,14 +74,15 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: rgb(170, 157, 68);
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+  box-shadow: rgba(102, 53, 7, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color: hsl(132, 83%, 69%);
+ 
   display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 30px;
+  line-height: 18px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
   text-align: center;
@@ -90,7 +91,7 @@ header {
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background: #d4c69e;
 }
 
 .float-right {
@@ -101,18 +102,19 @@ button[disabled] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: none;
+  border: inset;
   display: block;
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
+  font-size: 3.2rem;
+  background-color: beige;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #d6c390;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
@@ -126,12 +128,12 @@ button[disabled] {
   }
 
   #password {
-    font-size: 1rem;
+    font-size: 50rem;
   }
 }
 
 @media (max-width: 500px) {
   .btn {
-    font-size: 0.8rem;
+    font-size: 14rem;
   }
 }
