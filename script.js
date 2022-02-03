@@ -2,8 +2,11 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+function writePassword() {  
+  var passwordText = document.querySelector("#password"); 
+passwordText.textContent=""
   var password = generatePwd();
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -37,6 +40,8 @@ shuffleArray(upperCaseArray)
 
 // function to get and store user and put into object called user input
 function getUserInput(){
+  var passwordText  = document.getElementById("password")
+  passwordText.innerHTML=""
   var userPwdLength= prompt("How long you want passwork to be?")
   if(userPwdLength <8){alert("password must be greater than 7 characters")
 return;
@@ -66,6 +71,9 @@ if(confirmNumeric===false && confirmSpecial===false && confirmLowercase===false 
 // generate password function that takes user input and radomize function and cerate a new randomize array
 // based on user input and dispaly array in html
 function generatePwd(){
+  var passwordText = document.querySelector("#password"); 
+  passwordText.textContent=""
+  
   var userInput = getUserInput() //userInput.pwdLength, userInput.NumericChoice
   var finalPwd = []
   var characterPool = []

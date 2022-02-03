@@ -137,3 +137,6 @@ button[disabled] {
     font-size: 14rem;
   }
 }
+.textstyle{
+  font-family: 'Courier New', Courier, monospace;
+}
