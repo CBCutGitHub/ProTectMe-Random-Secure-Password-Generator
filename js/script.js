@@ -1,10 +1,9 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {  
   var passwordText = document.querySelector("#password"); 
-passwordText.textContent=""
+  passwordText.textContent=""
   var password = generatePwd();
 
   var passwordText = document.querySelector("#password");
@@ -15,13 +14,14 @@ passwordText.textContent=""
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-// Character arrays
+// Character arrays for this application
 var numericArray =  ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialArray = ['@',  '%',  '+',  '\\',  '/',  '&',  '!',  '#',  '$',  '^',  '?',  ':',  ',',  ')',  '(',  '}',  '{',  ']',  '[',  '~',  '-',  '_',  '.'];
 var lowerCaseArray = ['f', 'j', 'n', 'r', 'v', 'z', 'y', 'u', 'q', 'm', 'i', 'd', 'w', 'x', 's', 't', 'o', 'p', 'k', 'l', 'g', 'h', 'c', 'b', 'e', 'a'];
 var upperCaseArray = ['A', 'E', 'I', 'M', 'Q', 'U', 'Y', 'Z', 'V', 'R', 'N', 'J', 'F', 'B', 'C', 'H', 'G', 'L', 'K', 'P', 'O', 'T', 'S', 'X', 'W', 'D'];
 
-// var lowerCaseArray = ['f',  'j',  'n',  'r',  'v',  "z",  'y',  'u',  'q',  'm',  'i',  'd','w',  'x',  's',  'r',  'o',  'p',  'k',  'l',  'g',  'h',  'c',  'b',  'f',  'j'];
+//Changed the letter characters so they are not alphabetically listed to added a uniqueness to result of using lowercase and uppoercase characters
+// var lowerCaseArray = ['a',  'b',  'c',  'd',  'e',  "f",  'g',  'h',  'i',  'j',  'k',  'l','m',  'n',  'o',  'p',  'q',  'r',  's',  't',  'u',  'v',  'w',  'x',  'y',  'z'];
 // var upperCaseArray = [  'A',  'B',  'C',  'D',  'E',  "F",  'G',  'H',  'I',  'J',  'K',  'L',  'M',  'N', 'O',  'P',  'Q',  'R',  'S',  'R',  'U',  'V',  'W',  'X',  'Y',  'Z'];
 
 // function to radomize array
@@ -63,41 +63,43 @@ if(confirmNumeric===false && confirmSpecial===false && confirmLowercase===false 
     SpecialChoice: confirmSpecial,
     LowerCaseChoice: confirmLowercase,
     UpperCaseChoice: confirmUppercase
+}
 
-  }
-   console.log(inputObject)
-   return inputObject
+  console.log(inputObject)
+  return inputObject
 } 
-// generate password function that takes user input and radomize function and cerate a new randomize array
-// based on user input and dispaly array in html
+// generate password function that takes user input and radomize function and create a new randomize array
+// based on user input and dispaly array in browser via index.html
 function generatePwd(){
   var passwordText = document.querySelector("#password"); 
   passwordText.textContent=""
   
   var userInput = getUserInput() //userInput.pwdLength, userInput.NumericChoice
   var finalPwd = []
-  var characterPool = []
+  var characterSet = []
 
-  if(userInput.NumericChoice===true){
-    characterPool = characterPool.concat(numericArray)
-characterPool.push(shuffleArray(numericArray))
-  }
-  if(userInput.SpecialChoice===true){
-    characterPool = characterPool.concat(specialArray)
-characterPool.push(shuffleArray(specialArray))
-  }
-  if(userInput.LowerCaseChoice===true){
-    characterPool = characterPool.concat(lowerCaseArray)
-characterPool.push(shuffleArray(lowerCaseArray))
-  }
-  if(userInput.UpperCaseChoice===true){
-    characterPool = characterPool.concat(upperCaseArray)
-characterPool.push(shuffleArray(upperCaseArray))
-  }
-for(var i = 0; i <userInput.pwdLength; i++){
-  var stageArray = shuffleArray(characterPool)
-  finalPwd.push(stageArray)
+    if(userInput.NumericChoice===true){
+      characterSet = characterSet.concat(numericArray)
+  characterSet.push(shuffleArray(numericArray))
+    }
+    if(userInput.SpecialChoice===true){
+      characterSet = characterSet.concat(specialArray)
+  characterSet.push(shuffleArray(specialArray))
+    }
+    if(userInput.LowerCaseChoice===true){
+      characterSet = characterSet.concat(lowerCaseArray)
+  characterSet.push(shuffleArray(lowerCaseArray))
+    }
+    if(userInput.UpperCaseChoice===true){
+      characterSet = characterSet.concat(upperCaseArray)
+  characterSet.push(shuffleArray(upperCaseArray))
+    }
+  for(var i = 0; i <userInput.pwdLength; i++){
+    var stageArray = shuffleArray(characterSet)
+    finalPwd.push(stageArray)
+    }
+
+    console.log(finalPwd)
+    return finalPwd.join("")
 }
-console.log(finalPwd)
-return finalPwd.join("")
-}
+// Add to README.md; ShuffleArray research at : http://php.net/manual/en/function.shuffle.php
