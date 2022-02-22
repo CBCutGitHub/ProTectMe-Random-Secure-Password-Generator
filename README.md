@@ -50,7 +50,7 @@ Let's get started!
 
 Generate Password
 
-Copy the link and paste in your favorite browser or click this link  https://cbcutgithub.github.io/Password-Generator/ to launch the ProTectMe Random Secure Password Generator. Follow the prompts and your secure password will appear on the screen.
+Copy the link and paste in your favorite browser or click this link https://cbcutgithub.github.io/ProTectMe-Random-Secure-Password-Generator/ to launch the ProTectMe Random Secure Password Generator. Follow the prompts and your secure password will appear on the screen.
 
 You can generate one or more random secure passwords by clicking the generate password button to create a different one or to create several. The random secure password cannot be saved, therefore, please remember to jot down before generating another one.
 
