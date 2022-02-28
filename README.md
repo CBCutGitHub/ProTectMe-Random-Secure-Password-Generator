@@ -15,7 +15,7 @@ Application Functionality
 This application automatically generates a random secure password based on user's selection of how many characters the password will be and which type of characters they want to include in creating their password.
 
 Required criteria for user input or selection are:
-  *Must be 8 or more characters in length
+  *Must be 8 or more characters in length up to maximum 128
   *Must select at "least one" of the character types of:
    ** Uppercase characters (A, B, C, D, etc.)
    ** Lowercase characters(a, b, c, d, etc.)
@@ -37,6 +37,25 @@ A strong password should be unique for each account to reduce vulnerability in t
 
 Remembering strong passwords is difficult; therefore, it is recommended that you jot it down and place in a secure place or add to your password manager.
 
+Let's get started!
+
+Generate Password
+
+Copy the link and paste in your favorite browser or click this link ****ADD THE LINK*** to launch the ProTectMe Random Secure Password Generator. 
+
+Application image upon launch:![image of launch screen](./asset/LaunchScreen_ProTectMeRPG.png)
+
+Follow the prompts to generate with length and character selections as shown in image:![image of alert & messages](./asset/AlertsSelectionMsg_ProTectMeRPG.png)
+
+You can generate one or more random secure passwords by clicking the generate password button to create a different one or to create several. The random secure password cannot be saved, therefore, please remember to jot down before generating another one.
+
+Application image of a generated password:![image of generated password](./asset/GeneratedPwd_ProTectMeRPG.png) 
+
+Finish Actions
+
+Click the function F5 key on your keyboard to clear display. Most IMMPORTANTALLY! and for added security, close the browser tab.    
+
+
 If you have any questions, need assistance, or would like to contribute, please send a message via github at https://github.com.
 
 Credits, contributions and Acknowledgments from resouce searches on www.google.com:
@@ -45,15 +64,3 @@ Credits, contributions and Acknowledgments from resouce searches on www.google.c
     MDN at: https://developer.mozilla.org/en-US/docs/Glossary/RNG
     ShuffleArray research at: http://php.net/manual/en/function.shuffle.php
     Grepper on randomize arrays research at:  ShuffleArray research at : codegrepper.com/code-examples/javascript
-
-Let's get started!
-
-Generate Password
-
-Copy the link and paste in your favorite browser or click this link https://cbcutgithub.github.io/ProTectMe-Random-Secure-Password-Generator/ to launch the ProTectMe Random Secure Password Generator. Follow the prompts and your secure password will appear on the screen.
-
-You can generate one or more random secure passwords by clicking the generate password button to create a different one or to create several. The random secure password cannot be saved, therefore, please remember to jot down before generating another one.
-
-Finish Actions
-
-Click the function F5 key on your keyboard to clear display. Most IMMPORTANTALLY! and for added security, close the browser tab.    
