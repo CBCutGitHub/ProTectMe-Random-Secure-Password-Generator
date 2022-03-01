@@ -45,7 +45,8 @@ Copy the link and paste in your favorite browser or click this link ****ADD THE 
 
 Application image upon launch:![image of launch screen](./asset/LaunchScreen_ProTectMeRPG.png)
 
-Follow the prompts to generate with length and character selections as shown in image:![image of alert and messages](./asset/AlertsSelectionMsg_ProTectMeRPG.png)  AlertsSelectionMsg_ProTectMeRPG.png
+Follow the prompts to generate with length and character selections as shown in image:![image of alert and messages](./asset/AlertsSelectionMsg_ProTectMeRPG.png)  ![AlertsSelectionMsg_ProTectMeRPG](https://user-images.githubusercontent.com/95545346/156080066-9716658e-facc-44be-a7a5-e77fc62e450b.png)
+
 
 You can generate one or more random secure passwords by clicking the generate password button to create a different one or to create several. The random secure password cannot be saved, therefore, please remember to jot down before generating another one.
 
